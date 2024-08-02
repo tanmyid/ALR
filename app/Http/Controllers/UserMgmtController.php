@@ -120,6 +120,9 @@ class UserMgmtController extends Controller
             'password' => bcrypt($request->input('password')),
             'active' => $request->input('subMenuValue'),
         ]);
+
+
+        
         return redirect()->route('usermgmt.user')->with('success', 'Data berhasil disimpan!');
     }
 }
