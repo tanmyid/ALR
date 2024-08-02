@@ -28,6 +28,9 @@ Route::get('user-mgmt/role', [UserMgmtController::class, 'role'])->name('usermgm
 Route::post('user-mgmt/role', [UserMgmtController::class, 'tambahRole'])->name('role.add');
 Route::put('user-mgmt/role/{id}', [UserMgmtController::class, 'editRole'])->name('role.edit');
 Route::delete('user-mgmt/role/{id}', [UserMgmtController::class, 'delRole'])->name('role.del');
+// User
+Route::get('user-mgmt/user', [UserMgmtController::class, 'user'])->name('usermgmt.user');
+Route::post('user-mgmt/user', [UserMgmtController::class, 'tambahUser'])->name('user.add');
 
 Route::get('pengajuan', function () {
     return view('pengajuan.index', ['pesan' => 'Pengajuan']);
@@ -41,3 +44,7 @@ Route::get('pengajuan/moa', function () {
 Route::get('pengajuan/ia', function () {
     return view('pengajuan.index', ['pesan' => 'Pengajuan IA']);
 })->name('pengajuan.ia');
+
+Route::get('pendaftaran', function () {
+    return view('pengajuan.index', ['pesan' => 'Pendaftaran']);
+})->name('pendaftaran');
